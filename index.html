@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MR Gallery</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/da09cc5862.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rancho&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MR Gallery</h1>
+    </header>
+    <main>
+      <h2 class="title">MR Gallery</h2>
+      <section class="images-container">
+        <ul class="images-row">
+          <li id="image-1" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-1.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-2" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-2.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-3" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-3.jpg" alt="" class="image-item" />
+          </li>
+        </ul>
+        <ul class="images-row">
+          <li id="image-4" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-4.jpg" alt="" class="image-item" />
+          </li>
+        </ul>
+        <ul class="images-row">
+          <li id="image-5" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-5.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-6" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-6.jpg" alt="" class="image-item" />
+          </li>
+        </ul>
+        <ul class="images-row">
+          <li id="image-7" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-7.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-8" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-8.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-9" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-9.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-10" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-10.jpg" alt="" class="image-item" />
+          </li>
+          <li id="image-11" onclick="onImageOverlay(id)">
+            <img src="assets/img/image-11.jpg" alt="" class="image-item" />
+          </li>
+        </ul>
+      </section>
+
+      <!-- Overlay -->
+      <div class="overlay">
+        <button class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="btn-prev" onclick="onImageMoveLeft();"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="overlay-image" style="background-image: url(assets/img/image-1.jpg)">
+          <div>
+            <h2>Ini adalah judul</h2>
+            <p>Ini deskripsi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique pariatur iusto dolorum, consequuntur vel expedita!</p>
+          </div>
+        </div>
+        <!-- <img src="" alt="" class="overlay-image" />
+            <div></div> -->
+        <button href="" class="btn-next" onclick="onImageMoveRight()"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

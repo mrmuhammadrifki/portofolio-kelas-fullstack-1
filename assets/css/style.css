@@ -1,0 +1,361 @@
+/* CSS Reset Start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* CSS Reset And */
+
+/* MyCSS Start */
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+header h1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 84px;
+  margin-bottom: 84px;
+}
+
+.images-container {
+  width: 100%;
+}
+
+ul,
+li {
+  width: 100%;
+  line-height: 0;
+}
+
+.image-item {
+  width: 100%;
+  height: 139px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-item:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.images-row {
+  display: flex;
+}
+
+.images-row:nth-of-type(1) li:nth-child(1) .image-item {
+  flex: 2;
+}
+.images-row:nth-of-type(1) li:nth-child(2) .image-item {
+  flex: 1;
+}
+.images-row:nth-of-type(1) li:nth-child(3) .image-item {
+  flex: 2;
+}
+.images-row:nth-of-type(2) li .image-item {
+  height: 210px;
+  flex: 1;
+}
+.images-row:nth-of-type(3) li .image-item {
+  flex: 1;
+}
+.images-row:nth-of-type(4) li .image-item {
+  flex: 1;
+}
+
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay .btn-close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  color: white;
+  font-size: 35px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Navigasi */
+.btn-next {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.btn-prev {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  right: 90%;
+  top: 50%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.overlay .overlay-image {
+  margin: 2em auto;
+  width: 60%;
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.overlay .overlay-image div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 62px;
+  padding-right: 63px;
+  border-top-left-radius: 65px;
+  font-family: "Poppins", sans-serif;
+}
+
+.overlay .overlay-image div h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.overlay .overlay-image div p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+/* Animasi */
+@keyframes fadeCuy {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomAndFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .overlay .overlay-image div {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .overlay .overlay-image {
+    width: 90%;
+    height: 80%;
+    margin-top: 5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .overlay .overlay-image {
+    width: 100%;
+    height: 80%;
+    margin: 3em 0;
+    background-size: auto;
+  }
+
+  .overlay .overlay-image div {
+    padding: 20px;
+  }
+
+  .images-row {
+    display: block;
+  }
+}
+
+/* MyCSS And */
