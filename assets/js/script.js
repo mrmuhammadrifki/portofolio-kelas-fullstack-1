@@ -19,7 +19,7 @@ function onImageOverlay(id) {
   document.querySelector(".btn-next").style.animation = "fadeCuy 0.5s 0.5s forwards";
   document.querySelector(".btn-prev").style.animation = "fadeCuy 0.5s 0.5s forwards";
 
-  let imageIndex = id;
+  let imageIndex = 0;
   imageIndex = images.indexOf(id);
 
   overlayImage.style.backgroundImage = `url("assets/img/${images[imageIndex]}.jpg")`;
